@@ -16,9 +16,20 @@ const fortunes = [
 // 1. Select Elements
 let display = document.querySelector("#fortune-display");
 let button = document.querySelector("#cookie-btn");
+console.log(display);
+display.innerText =  fortunes[0];
+
 
 // 2. Add event Listener
+button.addEventListener("click", () => {
+console.log("test");
+//random between 0 - fortunes.length
+let randomIndex = Math.floor(Math.random() * fortunes.length);
+display.innerText = fortunes[randomIndex];
+});
+
 //      generate a random index
 //      get the fortune string
 //      update the display
 
+//anonieme functie = addeventlistener
